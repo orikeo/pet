@@ -6,6 +6,7 @@ import bcrypt from "bcrypt";
 
 import userRoutes from "./routes/user.routes";
 import authRoutes from "./auth/auth.routes";
+import notesRoutes from "./routes/notes.routes";
 
 
 
@@ -23,5 +24,6 @@ app.get("/me", authMiddleware, (req, res) => {
 
 app.use("/users", userRoutes);
 app.use("/auth", authRoutes);
+app.use("/notes", notesRoutes);
 
 export default app;
